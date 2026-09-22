@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Pantry Helper</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Food Pantry Helper</h1>
+        <p>find recipes based off food you already have</p>
+    </header>
+
+    <main>
+        <section class="stats">
+            <div class="stat-card">
+                <span id="mealCount">0</span>
+                <p>Meals</p>
+            </div>
+
+            <div class="stat-card">
+                <span>0</span>
+                <p>Foods</p>
+            </div>
+            
+            <div class="stat-card">
+                <span>0</span>
+                <p>Shopping Items</p>
+            </div>
+        </section>
+
+        <section class="controls">
+            <button id="allMealsButton" class="active">
+                All Meals
+            </button>
+
+            <button id="breakfastButton">
+                Breakfast
+            </button>
+
+            <button id="dinnerButton">
+                Lunch / Dinner
+            </button>
+        </section>
+
+        <section>
+            <h2>Meal Database</h2>
+
+            <div id="mealGrid" class="meal-grid">
+                <p>Loading meals...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app/js"></script>
+</body>
+</html>

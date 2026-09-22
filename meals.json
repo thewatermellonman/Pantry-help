@@ -1,0 +1,155 @@
+[
+  {
+    "id": "breakfast-1",
+    "name": "Pancake & Sausage Breakfast",
+    "category": "Breakfast",
+    "ingredients": [
+      { "name": "Pancake Mix", "amount": 1, "unit": "box/bag" },
+      { "name": "Sausage", "amount": 1, "unit": "" },
+      { "name": "Milk", "amount": 1, "unit": "carton" },
+      { "name": "Fruit", "amount": 2, "unit": "cans" },
+      { "name": "Peanut Butter", "amount": 1, "unit": "jar" },
+      { "name": "Vegetable Oil", "amount": 1, "unit": "bottle" }
+    ]
+  },
+  {
+    "id": "breakfast-2",
+    "name": "Peanut Butter & Jelly Pancakes",
+    "category": "Breakfast",
+    "ingredients": [
+      { "name": "Pancake Mix", "amount": 1, "unit": "box/bag" },
+      { "name": "Peanut Butter", "amount": 1, "unit": "jar" },
+      { "name": "Jelly", "amount": 1, "unit": "jar" },
+      { "name": "Milk", "amount": 1, "unit": "box" },
+      { "name": "Fruit", "amount": 2, "unit": "cans" }
+    ]
+  },
+  {
+    "id": "breakfast-3",
+    "name": "Pancakes & Bacon/Sausage",
+    "category": "Breakfast",
+    "ingredients": [
+      { "name": "Pancake Mix", "amount": 1, "unit": "" },
+      { "name": "Bacon/Sausage", "amount": 1, "unit": "" },
+      { "name": "Cans of Fruit", "amount": 1, "unit": "" },
+      { "name": "Shelf Stable Milk", "amount": 1, "unit": "" },
+      { "name": "Syrup", "amount": 1, "unit": "" }
+    ]
+  },
+  {
+    "id": "breakfast-4",
+    "name": "Egg & Bacon Breakfast",
+    "category": "Breakfast",
+    "ingredients": [
+      { "name": "Milk", "amount": 1, "unit": "" },
+      { "name": "Peanut Butter", "amount": 1, "unit": "" },
+      { "name": "Egg", "amount": 4, "unit": "" },
+      { "name": "Bacon", "amount": 1, "unit": "" },
+      { "name": "Corn Muffin Mix", "amount": 1, "unit": "" },
+      { "name": "Fruit", "amount": 2, "unit": "cans/4 fruit cups" }
+    ]
+  },
+
+  {
+    "id": "chicken-alfredo",
+    "name": "Chicken Alfredo",
+    "category": "Lunch/Dinner",
+    "ingredients": [
+      { "name": "Alfredo", "amount": 1, "unit": "packet" },
+      { "name": "Spaghetti", "amount": 1, "unit": "box" },
+      { "name": "Chicken", "amount": 1, "unit": "can or 3 packets" },
+      { "name": "Frozen Vegetables", "amount": 1, "unit": "bag" }
+    ]
+  },
+  {
+    "id": "soup-meal",
+    "name": "Soup Meal",
+    "category": "Lunch/Dinner",
+    "ingredients": [
+      { "name": "Soup", "amount": 2, "unit": "pouches" },
+      { "name": "Mashed Potatoes", "amount": 1, "unit": "bag" },
+      { "name": "Green Beans", "amount": 1, "unit": "can" },
+      { "name": "Corn Muffin Mix", "amount": 1, "unit": "box/bag" },
+      { "name": "Frozen Chicken", "amount": 1, "unit": "" }
+    ]
+  },
+  {
+    "id": "taco-bowl",
+    "name": "Taco Bowl Meal",
+    "category": "Lunch/Dinner",
+    "ingredients": [
+      { "name": "Ground Beef/Turkey", "amount": 1, "unit": "" },
+      { "name": "Black Beans", "amount": 1, "unit": "can" },
+      { "name": "Rice", "amount": 1, "unit": "bag" },
+      { "name": "Cheese", "amount": 1, "unit": "pack" },
+      { "name": "Tomatoes", "amount": 2, "unit": "cans" }
+    ]
+  },
+  {
+    "id": "kid-friendly-nuggies",
+    "name": "Kid-Friendly Nuggies",
+    "category": "Lunch/Dinner",
+    "ingredients": [
+      { "name": "Chicken Nuggets", "amount": 1, "unit": "" },
+      { "name": "Mac n Cheese", "amount": 1, "unit": "" },
+      { "name": "Green Beans", "amount": 1, "unit": "" }
+    ]
+  },
+  {
+    "id": "stew",
+    "name": "Stew",
+    "category": "Lunch/Dinner",
+    "ingredients": [
+      { "name": "Mashed Potatoes", "amount": 1, "unit": "" },
+      { "name": "Veggies", "amount": 1, "unit": "" },
+      { "name": "Beef/Chicken Stew", "amount": 1, "unit": "" }
+    ]
+  },
+  {
+    "id": "chili",
+    "name": "Chili Meal",
+    "category": "Lunch/Dinner",
+    "ingredients": [
+      { "name": "Corn Muffin Mix", "amount": 1, "unit": "box/bag" },
+      { "name": "Canned Chili", "amount": 2, "unit": "" },
+      { "name": "Canned Carrots", "amount": 2, "unit": "" },
+      { "name": "Chili Powder", "amount": 1, "unit": "" }
+    ]
+  },
+  {
+    "id": "broth-beans",
+    "name": "Broth and Beans",
+    "category": "Lunch/Dinner",
+    "ingredients": [
+      { "name": "Broth", "amount": 1, "unit": "" },
+      { "name": "Butter Beans", "amount": 2, "unit": "" },
+      { "name": "Kidney Beans", "amount": 1, "unit": "or 2" },
+      { "name": "Black Beans", "amount": 1, "unit": "" },
+      { "name": "Rice", "amount": 1, "unit": "" },
+      { "name": "Venison", "amount": 1, "unit": "" }
+    ]
+  },
+  {
+    "id": "rice-a-roni",
+    "name": "Rice-a-Roni",
+    "category": "Lunch/Dinner",
+    "ingredients": [
+      { "name": "Rice a Roni", "amount": 1, "unit": "box" },
+      { "name": "Canned Chicken", "amount": 1, "unit": "can or 2 pouches" },
+      { "name": "Canned Vegetables", "amount": 1, "unit": "can" },
+      { "name": "Ramen", "amount": 2, "unit": "packs" }
+    ]
+  },
+  {
+    "id": "meatball-meal",
+    "name": "Meatball Meal",
+    "category": "Lunch/Dinner",
+    "ingredients": [
+      { "name": "Meatballs", "amount": 1, "unit": "pack" },
+      { "name": "Spaghetti", "amount": 1, "unit": "box" },
+      { "name": "Red Sauce", "amount": 1, "unit": "can" },
+      { "name": "Mashed Potatoes", "amount": 1, "unit": "pack" },
+      { "name": "Canned Vegetables", "amount": 2, "unit": "cans" }
+    ]
+  }
+]
