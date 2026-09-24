@@ -3,59 +3,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Pantry Helper</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <title>Food for Thought — Pantry Planner</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Food Pantry Helper</h1>
-        <p>find recipes based off food you already have</p>
+
+    <header class="topbar">
+
+        <div>
+            <div class="eyebrow">FOOD FOR THOUGHT</div>
+
+            <h1>Pantry Planner</h1>
+
+            <p>
+                Inventory → meals → shopping list
+            </p>
+        </div>
+
+        <div class="header-actions">
+
+            <button id="exportBtn" class="ghost">
+                Export Data
+            </button>
+
+            <label class="button ghost">
+                Import Data
+                <input
+                    id="importData"
+                    type="file"
+                    accept=".json"
+                    hidden
+                >
+            </label>
+
+        </div>
+
     </header>
 
+
     <main>
-        <section class="stats">
-            <div class="stat-card">
-                <span id="mealCount">0</span>
-                <p>Meals</p>
+
+        <!-- DASHBOARD -->
+
+        <section class="dashboard">
+
+            <div class="stat">
+                <span id="foodCount">0</span>
+                <small>food types</small>
             </div>
 
-            <div class="stat-card">
-                <span>0</span>
-                <p>Foods</p>
+            <div class="stat">
+                <span id="totalUnits">0</span>
+                <small>total units</small>
             </div>
-            
-            <div class="stat-card">
-                <span>0</span>
-                <p>Shopping Items</p>
+
+            <div class="stat">
+                <span id="readyCount">0</span>
+                <small>ready meals</small>
             </div>
+
+            <div class="stat">
+                <span id="almostCount">0</span>
+                <small>almost ready</small>
+            </div>
+
         </section>
 
-        <section class="controls">
-            <button id="allMealsButton" class="active">
-                All Meals
+
+        <!-- NAVIGATION -->
+
+        <nav class="tabs">
+
+            <button
+                class="tab active"
+                data-tab="inventory"
+            >
+                📦 Inventory
             </button>
 
-            <button id="breakfastButton">
-                Breakfast
+            <button
+                class="tab"
+                data-tab="meals"
+            >
+                🍽 Meals
             </button>
 
-            <button id="dinnerButton">
-                Lunch / Dinner
+            <button
+                class="tab"
+                data-tab="planner"
+            >
+                ✨ Meal Planner
             </button>
+
+            <button
+                class="tab"
+                data-tab="shopping"
+            >
+                🛒 Shopping List
+            </button>
+
+        </nav>
+
+
+        <!-- INVENTORY -->
+
+        <section
+            class="panel tab-panel active"
+            id="inventory"
+        >
+
+            <div class="section-head">
+
+                <div>
+
+                    <h2>Pantry Inventory</h2>
+
+                    <p>
+                        Add the food currently available in the pantry.
+                    </p>
+
+                </div>
+
+                <button
+                    id="clearInventory"
+                    class="danger"
+                >
+                    Clear Inventory
+                </button>
+
+            </div>
+
+
+            <form
+                id="foodForm"
+                class="add-form"
+            >
+
+                <input
+                    id="foodName"
+                    required
+                    placeholder="Food name"
+                >
+
+                <input
+                    id="foodQty"
+                    required
+                    type="number"
+                    min="0"
+                    step="1"
+                    placeholder="Quantity"
+                >
+
+                <input
+                    id="foodUnit"
+                    placeholder="Unit (cans, boxes, bags...)"
+                >
+
+                <button class="primary">
+                    Add Food
+                </button>
+
+            </form>
+
+
+            <div class="import-box">
+
+                <strong>Quick import</strong>
+
+                <span>
+                    CSV format:
+                    <code>Food,Quantity,Unit</code>
+                </span>
+
+                <label class="button secondary">
+
+                    Upload CSV
+
+                    <input
+                        id="csvFile"
+                        type="file"
+                        accept=".csv,.txt"
+                        hidden
+                    >
+
+                </label>
+
+                <button
+                    id="demoBtn"
+                    class="secondary"
+                >
+                    Load Demo Inventory
+                </button>
+
+            </div>
+
+
+            <div
+                id="inventoryList"
+                class="inventory-list"
+            ></div>
+
         </section>
 
-        <section>
-            <h2>Meal Database</h2>
 
-            <div id="mealGrid" class="meal-grid">
-                <p>Loading meals...</p>
+        <!-- MEALS -->
+
+        <section
+            class="panel tab-panel"
+            id="meals"
+        >
+
+            <div class="section-head">
+
+                <div>
+
+                    <h2>Meal Database</h2>
+
+                    <p>
+                        Meals from the Food for Thought meal list.
+                    </p>
+
+                </div>
+
+                <input
+                    id="mealSearch"
+                    class="search"
+                    placeholder="Search meals or ingredients..."
+                >
+
             </div>
+
+
+            <div class="filters">
+
+                <button
+                    class="filter active"
+                    data-filter="all"
+                >
+                    All
+                </button>
+
+                <button
+                    class="filter"
+                    data-filter="Breakfast"
+                >
+                    Breakfast
+                </button>
+
+                <button
+                    class="filter"
+                    data-filter="Lunch/Dinner"
+                >
+                    Lunch / Dinner
+                </button>
+
+            </div>
+
+
+            <div
+                id="mealGrid"
+                class="meal-grid"
+            ></div>
+
+        </section>
+
+
+        <!-- PLANNER -->
+
+        <section
+            class="panel tab-panel"
+            id="planner"
+        >
+
+            <div class="section-head">
+
+                <div>
+
+                    <h2>Meal Planner</h2>
+
+                    <p>
+                        See what your inventory can make.
+                    </p>
+
+                </div>
+
+                <button
+                    id="generateBox"
+                    class="primary"
+                >
+                    Generate 5-Meal Box
+                </button>
+
+            </div>
+
+
+            <div
+                id="boxResult"
+                class="box-result hidden"
+            ></div>
+
+
+            <div
+                id="matchGrid"
+                class="match-grid"
+            ></div>
+
+        </section>
+
+
+        <!-- SHOPPING -->
+
+        <section
+            class="panel tab-panel"
+            id="shopping"
+        >
+
+            <div class="section-head">
+
+                <div>
+
+                    <h2>Shopping List</h2>
+
+                    <p>
+                        Missing ingredients from your selected meals.
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <button
+                        id="printList"
+                        class="secondary"
+                    >
+                        Print
+                    </button>
+
+                    <button
+                        id="clearShopping"
+                        class="danger"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div id="shoppingList"></div>
+
         </section>
 
     </main>
 
-    <script src="app/js"></script>
+
+    <div
+        id="toast"
+        class="toast"
+    ></div>
+
+
+    <script src="app.js"></script>
+
 </body>
 </html>
